@@ -1218,7 +1218,7 @@ delete, the cdr is the number of characters.
 BEG and END are the bounds of the change for use with
 `combine-change-calls'.  NUM-INSERTED is the total number
 of characters inserted, which is used to adjust END to match
-Emacs behaviour when determining the range of a change."
+Emacs behavior when determining the range of a change."
   (when batch
     (prettier--combine-change-calls
      beg
