@@ -59,7 +59,7 @@
 
   ;; Fallback for Emacs < 27
   (defmacro prettier--combine-change-calls (beg end &rest body)
-    (if (macrop 'combine-change-calls)
+    (if (fboundp 'combine-change-calls)
         `(combine-change-calls ,beg ,end ,@body)
       `(when (>= ,end ,beg) (combine-after-change-calls ,@body)))))
 
