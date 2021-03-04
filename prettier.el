@@ -796,6 +796,7 @@ Additional considerations were:
                (format "*prettier %s*"
                        (or (prettier--buffer-remote-p 'host)
                            "(local)"))))
+         (process-connection-type nil)
          (payload
           (with-temp-buffer
             (insert-file-contents-literally
